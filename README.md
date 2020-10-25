@@ -60,3 +60,46 @@ source face_recognition/bin/activate
 - To read images we do the following:
 
 ![](https://i.imgur.com/ezFMbA5.png)
+
+## 3. Build Face Recognition Model
+
+### Goals ⚡🎯🎯
+
+- Learning to preprocess images data.
+- Learn to use powerful feature engineering technique like PCA to get Eigen Images.
+- Training Images with SVM.
+- Evaluation and Tuning of your Machine Learning model.
+
+- Sequence in which we will proceed:
+
+![](https://i.imgur.com/i0s7IhM.png)
+
+### 3.1 Machine Learning Pipeline Architecture
+
+- Create a Gender Classification Model and Integrate to Flask App.
+- Task is to develop a ML model which should automatically detect and classify genders.
+
+- `Deliverables:`
+- Develop a Flask app and integrate a ML model.
+- User will upload an image and app has to detect the face and identify gender.
+
+- `High Level Diagram:`
+
+![](https://i.imgur.com/uxOAwbq.png)
+
+- `ML Model Application Flow:`
+
+![](https://i.imgur.com/HRn53jx.png)
+
+### 3.2 Understanding Data
+
+- If you look at dataset from the link [Faces Only 1 GB](https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/) you will see that data is highly unstructured as the coordinates of face isn't same plus the dimension of each and every image is different as well.
+- We need to extract the faces and store them in a separate folder. We will crop the face using harr cascade classifier and we will then send that to male or female folder named as Crop_Male and Crop_Female.
+
+![](https://i.imgur.com/JX3RRdY.png)
+
+### 3.3 Crop Faces from Images
+
+- Ref 03_01_crop_faces.ipynb.
+- Go to this [link](https://drive.google.com/drive/folders/18b7bVs0rolocCxLC-PV9ydu4dq1q3yVg?usp=sharing) and download the male and female folder before running crop_faces notebook, it contains the images that will be used for training.
+- Place those folders inside `./data/`.
